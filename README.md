@@ -1,7 +1,13 @@
 <h2 align="center">Breve estudo/análise sobre futebol</h2>
 
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Python-3-blue.svg"
+      alt="Standard" />
+  </a>
+
 ### Objetivo
 O script tem a finalidade de gerar um output para ser carregado no site <a href="https://app.flourish.studio/">Flourish</a> e gerar um gráfico de corrida (Bar Race).
+ O gráfico irá correr mês a mês desde 1974 até 2021 mostrando a corrida entre as Seleções de Futebol!
 
 ### Exemplo de Output
 ```csv
