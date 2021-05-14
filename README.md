@@ -9,6 +9,11 @@ Brazil,https://www.countryflags.io/BR/flat/64.png,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 ```
 
 ### Dataset
-Para gerar o output, baixe o <a href="https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017">Dataset</a>.
+Antes de executar o script, baixe o <a href="https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017">Dataset</a>.
+
+### Pré-reqs
+- __Python 3:__ Ter o Python 3 instalado;
+- __Pycountry:__ pip3 install pycountry
 
 ### Como utilizar o script
+python3 --dataset dataset.csv
