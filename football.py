@@ -8,7 +8,7 @@ import os
 import json
 import pycountry
 import sys
-
+import datetime
 
 class Football:
     def __init__(self):
@@ -53,7 +53,13 @@ class Football:
             for g in self.games_with_no_winner:
                 # Set dates
                 date = g['date'].split("-")
-                date = "{}-{}".format(date[0], date[1])
+
+                # Convert month
+                month_number = date[1]
+                dt = datetime.datetime.strptime(month_number, "%m")
+                month = dt.strftime("%b")
+
+                date = "{}-{}".format(month,date[0])
                 if date not in list_dates:
                     list_dates.append(date)
 
