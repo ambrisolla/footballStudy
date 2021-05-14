@@ -5,14 +5,15 @@
     <img src="https://img.shields.io/badge/Python-3-blue.svg"
       alt="Standard" />
   </a>
+  <a href="https://app.flourish.studio">
+    <img src="https://img.shields.io/badge/Flourish-Data%20Visualization-red.svg"
+      alt="Standard" />
+  </a>
   <a href="https://www.kaggle.com/">
     <img src="https://img.shields.io/badge/Kaggle-nice%20datasets-blue.svg"
       alt="Standard" />
   </a>
-  <a href="https://app.flourish.studio">
-    <img src="https://img.shields.io/badge/Flourish-Data%20Visualization-blue.svg"
-      alt="Standard" />
-  </a>
+  
   
 </div>
 
