@@ -6,7 +6,7 @@
       alt="Standard" />
   </a>
   <a href="https://www.python.org/downloads/">
-    <img src="https://img.shields.io/badge/Kaggle.svg"
+    <img src="https://img.shields.io/badge/Kaggle-Datasets-blue.svg"
       alt="Standard" />
   </a>
 </div>
