@@ -4,17 +4,21 @@
     "bar race" no site: https://app.flourish.studio
 """
 
-import os,json,pycountry,sys
+import os
+import json
+import pycountry
+import sys
+
 
 class Football:
     def __init__(self):
 
         try:
-            # Get file name after parameter --dataset 
-            for i,p in enumerate(sys.argv):
+            # Get file name after parameter --dataset
+            for i, p in enumerate(sys.argv):
                 if p == '--dataset':
                     dataset_file = sys.argv[i+1]
-            
+
             # Check if file exists
             if dataset_file == "":
                 print("Erro: Dataset not found!")
@@ -24,24 +28,24 @@ class Football:
                 sys.exit(1)
 
             # Generate a dict with "dataset.csv" data
-            dataset = open(dataset_file,"r")
+            dataset = open(dataset_file, "r")
 
             # Config dict keys
             first_line = dataset.readline()
-            keys = first_line.replace("\n","").split(",")
+            keys = first_line.replace("\n", "").split(",")
 
             # Add dataset data to all_games dict
             list_games = []
-            for idx,line in enumerate(dataset.readlines()):
-                line = line.replace("\n","")
+            for idx, line in enumerate(dataset.readlines()):
+                line = line.replace("\n", "")
                 if idx > 0:
                     field_list = {}
                     line_splited = line.split(",")
-                    for idx2,key in enumerate(keys):
+                    for idx2, key in enumerate(keys):
                         field_list[key] = line_splited[idx2]
                     list_games.append(field_list)
             self.games_with_no_winner = list_games
-            
+
             # Set dates/countries/winners
             list_dates = []
             list_countries = []
@@ -49,7 +53,7 @@ class Football:
             for g in self.games_with_no_winner:
                 # Set dates
                 date = g['date'].split("-")
-                date = "{}-{}".format(date[0],date[1])
+                date = "{}-{}".format(date[0], date[1])
                 if date not in list_dates:
                     list_dates.append(date)
 
@@ -69,7 +73,7 @@ class Football:
                     winner = g['away_team']
                 elif no_winner:
                     winner = False
-                
+
                 # Add a winner
                 g['winner'] = winner
 
@@ -81,11 +85,11 @@ class Football:
             self.countries = sorted(list_countries)
         except Exception as e:
             return {
-                "Erro" : str(e)
-            }            
+                "Erro": str(e)
+            }
 
     # Set flag
-    def setCountryFlag(self,country):
+    def setCountryFlag(self, country):
         try:
             codes = pycountry.countries.search_fuzzy(country)[0]
             code2 = codes.alpha_2
@@ -93,34 +97,36 @@ class Football:
             return url
         except:
             return ""
-    
+
     # Set columns indexes
     def mountHeader(self):
         dates = self.dates
-        for idx,date in enumerate(dates):
+        for idx, date in enumerate(dates):
             if idx == 0:
-                print("Teams,Image",end=",")
+                print("Teams,Image", end=",")
             else:
-                print(date,end=",")
+                print(date, end=",")
 
-    # Set data 
+    # Set data
     def mountBarRaceTable(self):
         # Mount column index
         self.mountHeader()
-        # Get all games 
+        # Get all games
         games = self.games
         # Get victory by country/date
         for country in self.countries:
             # get country flag url image
             flag = self.setCountryFlag(country)
-            print("\n{},{}".format(country,flag),end=",")
+            print("\n{},{}".format(country, flag), end=",")
             total_wins = 0
             for date in self.dates:
-                wins = len([x for x in games if x['winner'] == country and date in x['date']])
+                wins = len([x for x in games if x['winner']
+                            == country and date in x['date']])
                 total_wins = total_wins+wins
-                print(total_wins,end=",")
-    
-# Create output    
+                print(total_wins, end=",")
+
+
+# Create output
 if '--dataset' not in sys.argv:
     print("Informe o dataset: \n\t\t--dataset example.csv")
 else:
