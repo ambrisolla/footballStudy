@@ -1,4 +1,4 @@
-<h1 align="center">Breve estudo/análise sobre futebol</h1>
+<h2 align="center">Breve estudo/análise sobre futebol</h2>
 
 ### Objetivo
 O script tem a finalidade de gerar um output para ser carregado no site <a href="https://app.flourish.studio/">Flourish</a> e gerar um gráfico de corrida (Bar Race).
@@ -10,3 +10,5 @@ Brazil,https://www.countryflags.io/BR/flat/64.png,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 
 ### Dataset
 Para gerar o output, baixe o <a href="https://www.kaggle.com/martj42/international-football-results-from-1872-to-2017">Dataset</a>.
+
+### Como utilizar o script
