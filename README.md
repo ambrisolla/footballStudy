@@ -1,9 +1,15 @@
 <h2 align="center">Breve estudo/análise sobre futebol</h2>
 
+<div align="center">
   <a href="https://www.python.org/downloads/">
     <img src="https://img.shields.io/badge/Python-3-blue.svg"
       alt="Standard" />
   </a>
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Kaggle-Datasets-9cf.svg"
+      alt="Standard" />
+  </a>
+</div>
 
 ### Objetivo
 O script tem a finalidade de gerar um output para ser carregado no site <a href="https://app.flourish.studio/">Flourish</a> e gerar um gráfico de corrida (Bar Race).
