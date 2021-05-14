@@ -34,4 +34,6 @@ Antes de executar o script, baixe o <a href="https://www.kaggle.com/martj42/inte
 - __Pycountry:__ pip3 install pycountry
 
 ### Como utilizar o script
+```bash
 python3 --dataset dataset.csv
+```
