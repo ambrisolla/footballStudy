@@ -5,8 +5,8 @@
     <img src="https://img.shields.io/badge/Python-3-blue.svg"
       alt="Standard" />
   </a>
-  <a href="https://www.python.org/downloads/">
-    <img src="https://img.shields.io/badge/Kaggle-Datasets-blue.svg"
+  <a href="https://www.kaggle.com/">
+    <img src="https://img.shields.io/badge/Kaggle--blue.svg"
       alt="Standard" />
   </a>
 </div>
