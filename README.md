@@ -31,9 +31,12 @@ Antes de executar o script, baixe o <a href="https://www.kaggle.com/martj42/inte
 
 ### Pré-reqs
 - __Python 3:__ Ter o Python 3 instalado;
-- __Pycountry:__ pip3 install pycountry
+- __Pycountry:__ Instalar a biblioteca Pycountry:
+```bash
+$ pip3 install pycountry
+```
 
 ### Como utilizar o script
 ```bash
-python3 --dataset dataset.csv
+$ python3 --dataset dataset.csv
 ```
