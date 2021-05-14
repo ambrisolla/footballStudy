@@ -1,7 +1,7 @@
 """
     Autor: André Müzel Brisolla
     Objetivo: Gerar um output para carregar um 
-    "bar race" para carregar no site: https://app.flourish.studio
+    "bar race" no site: https://app.flourish.studio
 """
 
 import os,json,pycountry,sys
