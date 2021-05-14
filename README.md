@@ -38,5 +38,5 @@ $ pip3 install pycountry
 
 ### Como utilizar o script
 ```bash
-$ python3 football.py --dataset dataset.csv
+$ python3 football.py --dataset dataset.csv > output.csv
 ```
